@@ -17,5 +17,6 @@ namespace EntityLayer.Concrete
         public string ContactPhone { get; set; }
         public string ContactText { get; set; }
         public string ContactButton { get; set; }
+        //dataya yazdırmak için
     }
 }

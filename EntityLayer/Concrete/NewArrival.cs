@@ -13,5 +13,7 @@ namespace EntityLayer.Concrete
         public int NewArrivalid { get; set; }
         public string ArrivalImage { get; set; }
         public string ArrivalBtnTitle{ get; set; }
+        public List<Home> Homes { get; set; }
+
     }
 }

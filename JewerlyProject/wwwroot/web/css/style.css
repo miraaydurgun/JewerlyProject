@@ -237,17 +237,17 @@ h5#exampleModalLabel {
 /*--//model--*/
 /*-- banner --*/
 .one-img {
-    background: url(../images/DSC_0115.jpg)no-repeat center;
+    background: url('../images/1.jpeg')no-repeat center;
     opacity: 0.6;
 }
 
 .two-img {
-    background: url(../images/a.jpeg)no-repeat center;
+    background: url('../images/1.jpeg')no-repeat center;
     opacity: 0.6;
 }
 
 .three-img {
-    background: url(../images/DSC_0147.jpg)no-repeat center;
+    background: url('../images/1.jpeg')no-repeat center;
     opacity: 0.6;
 }
 

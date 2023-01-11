@@ -13,7 +13,6 @@ namespace EntityLayer.Concrete
         public int Loginid { get; set; }
         public string LoginName { get; set; }
         public string LoginMail { get; set; }
-
         public int LoginPassword { get; set; }
 
     }

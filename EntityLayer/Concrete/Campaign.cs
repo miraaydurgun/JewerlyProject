@@ -14,5 +14,7 @@ namespace EntityLayer.Concrete
         public string CampaignImage { get; set; }
         public string CampaignComment { get; set; }
         public string CampaignTitle { get; set; }
+        public List<Home> Homes { get; set; }
+
     }
 }

@@ -6,6 +6,7 @@ namespace JewelryProject.Controllers
     [Authorize]
     public class DefaultController : Controller
     {
+
         public IActionResult Index()
         {
             return View();

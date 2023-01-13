@@ -7,7 +7,7 @@ using EntityLayer.Concrete;
 
 namespace BusinessLayer.Abstract
 {
-    public interface IInformatinService : IGenericService<Information>
+    public interface IInformationService : IGenericService<Information>
     {
     }
 }

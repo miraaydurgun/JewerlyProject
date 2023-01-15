@@ -9,5 +9,9 @@ namespace BusinessLayer.Abstract
 {
     public interface IHomeService : IGenericService<Home>
     {
+        List<Home> GetHomeWithCampaign();
+        List<Home> GetHomeWithNewArrival();
+        List<Home> GetHomeWithReview();
+
     }
 }

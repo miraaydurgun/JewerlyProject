@@ -16,6 +16,22 @@ namespace BusinessLayer.Concrete
         {
             _homeDal = homeDal;
         }
+
+        public List<Home> GetHomeWithCampaign()
+        {
+            return _homeDal.GetListWithCampaign();
+        }
+
+        public List<Home> GetHomeWithNewArrival()
+        {
+            return _homeDal.GetListWithNewArrival();
+        }
+
+        public List<Home> GetHomeWithReview()
+        {
+            return _homeDal.GetListWithReview();
+        }
+
         public void TAdd(Home t)
         {
             _homeDal.Insert(t);

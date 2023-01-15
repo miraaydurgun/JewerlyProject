@@ -9,5 +9,9 @@ namespace DataAccessLayer.Abstract
 {
     public interface IHomeDal : IGenericDal<Home>
     {
+        List<Home> GetListWithCampaign();
+        List<Home> GetListWithNewArrival();
+        List<Home> GetListWithReview();
+
     }
 }

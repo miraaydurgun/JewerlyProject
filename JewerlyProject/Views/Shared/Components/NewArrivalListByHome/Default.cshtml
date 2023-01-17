@@ -4,20 +4,24 @@
 <section class="blog py-lg-4 py-md-3 py-sm-3 py-3">
     <div class="container py-lg-5 py-md-4 py-sm-4 py-3">
         <h3 class="title clr text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3">Yeni gelenler</h3>
-        @foreach (var item in Model)
-        {
-                <div class="slid-img">
-                    <ul id="flexiselDemo1">
-                        <li>
-                            <div class="agileinfo_port_grid">
-                                    <img src="@item.ArrivalImage" alt=" " class="img-fluid" />
-                                <div class="outs_more-buttn">
-                                        <a href="shop.html">@item.ArrivalBtnTitle</a>
-                                </div>
+            <div class="slid-img">
+                <ul id="flexiselDemo1">
+          @foreach (var item in Model)
+                    {
+                    <li>
+                    
+                        <div class="agileinfo_port_grid">
+                            <img src=@item.ArrivalImage alt=" " class="img-fluid" style="padding:0.3rem; " />
+
+                            <div class="outs_more-buttn">
+                                <a href="shop.html">@item.ArrivalBtnTitle</a>
                             </div>
-                        </li>
-                    </ul>
-                </div>
-        }
+                        </div>
+                   
+                    </li>
+                }
+                </ul>
+          
+            </div>
     </div>
 </section>

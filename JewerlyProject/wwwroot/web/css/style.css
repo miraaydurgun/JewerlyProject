@@ -99,7 +99,6 @@ ul {
 /*-- nav --*/
 .header-outs {
     position: relative;
-    margin-bottom:-3.2%;
 }
 
 .header-bar {
@@ -189,7 +188,7 @@ nav.navbar.navbar-expand-lg.navbar-light {
     -moz-transition: 0.5s all;
     -o-transition: 0.5s all;
     -ms-transition: 0.5s all;
-    margin-bottom: -300%;
+
 }
 
 nav.navbar.navbar-expand-lg.navbar-light {
@@ -232,7 +231,7 @@ h5#exampleModalLabel {
 
 /*--//model--*/
 /*-- banner --*/
-.one-img {
+/*.one-img {
     background: url('../images/1.jpeg')no-repeat center;
     opacity: 0.6;
 }
@@ -245,7 +244,7 @@ h5#exampleModalLabel {
 .three-img {
     background: url('../images/1.jpeg')no-repeat center;
     opacity: 0.6;
-}
+}*/
 
 .slider-img {
     background-size: cover;
@@ -702,7 +701,7 @@ ul.short_ls li {
 }
 
 .agileinfo_port_grid:hover .agileit-folio_grid:after {
-    opacity: 1;
+    opacity:1;
 }
 
 .agileinfo_port_grid:hover .agileit-folio_grid:before {
@@ -784,15 +783,19 @@ ul.short_ls li {
     background: none;
 }
 
-/*.about{position:relative;}
-.slid-img{position:absolute;
-width:100%;
-left:0%;
-bottom:-86px}
+
 /*--//flexisel--*/
 /*--//slider--*/
 /* --customer-review--*/
-.clients {
+.date {
+    font-size: 0.7rem;
+    float: right;
+    margin-right: -40%;
+    margin-top: -10%;
+}
+
+
+    .clients {
     background-color: #eee9e0;
     background-size: cover;
     -webkit-background-size: cover;

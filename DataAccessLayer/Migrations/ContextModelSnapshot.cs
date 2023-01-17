@@ -131,9 +131,6 @@ namespace DataAccessLayer.Migrations
                     b.Property<string>("SliderComment")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("SliderImage")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("SliderTitle")
                         .HasColumnType("nvarchar(max)");
 
@@ -217,9 +214,6 @@ namespace DataAccessLayer.Migrations
 
                     b.Property<DateTime>("ReviewDate")
                         .HasColumnType("datetime2");
-
-                    b.Property<string>("ReviewImage")
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ReviewMail")
                         .HasColumnType("nvarchar(max)");

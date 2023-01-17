@@ -129,8 +129,8 @@ h1 a.navbar-brand {
 .info-top-grid,
 nav.navbar.navbar-expand-lg.navbar-light {
     background-color: white;
-
 }
+
 .hedder-up,
 .info-top-grid,
 nav.navbar.navbar-expand-lg.navbar-light {
@@ -188,7 +188,6 @@ nav.navbar.navbar-expand-lg.navbar-light {
     -moz-transition: 0.5s all;
     -o-transition: 0.5s all;
     -ms-transition: 0.5s all;
-
 }
 
 nav.navbar.navbar-expand-lg.navbar-light {
@@ -231,7 +230,8 @@ h5#exampleModalLabel {
 
 /*--//model--*/
 /*-- banner --*/
-/*.one-img {
+
+.one-img {
     background: url('../images/1.jpeg')no-repeat center;
     opacity: 0.6;
 }
@@ -244,12 +244,11 @@ h5#exampleModalLabel {
 .three-img {
     background: url('../images/1.jpeg')no-repeat center;
     opacity: 0.6;
-}*/
+}
 
 .slider-img {
     background-size: cover;
     min-height: 800px;
-
 }
 
 .rslides {
@@ -297,7 +296,6 @@ h5#exampleModalLabel {
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
     margin: 0 auto;
-
 }
 
 .rslides_tabs {
@@ -701,7 +699,7 @@ ul.short_ls li {
 }
 
 .agileinfo_port_grid:hover .agileit-folio_grid:after {
-    opacity:1;
+    opacity: 1;
 }
 
 .agileinfo_port_grid:hover .agileit-folio_grid:before {
@@ -795,7 +793,7 @@ ul.short_ls li {
 }
 
 
-    .clients {
+.clients {
     background-color: #eee9e0;
     background-size: cover;
     -webkit-background-size: cover;
@@ -2032,4 +2030,4 @@ footer {
     }
 }
 
-    /*--//responsive--*/
+/*--//responsive--*/

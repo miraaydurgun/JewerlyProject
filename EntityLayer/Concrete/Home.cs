@@ -11,7 +11,6 @@ namespace EntityLayer.Concrete
     {
         [Key]
         public int Homeid { get; set; }
-        public string SliderImage { get; set; }
         public string SliderTitle { get; set; }
         public string SliderComment { get; set; }
         public int Campaignid { get; set; }

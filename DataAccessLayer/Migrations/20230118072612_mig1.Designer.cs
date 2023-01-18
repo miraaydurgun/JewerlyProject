@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataAccessLayer.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20230117092052_mig-deneme23")]
-    partial class migdeneme23
+    [Migration("20230118072612_mig1")]
+    partial class mig1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -42,6 +42,9 @@ namespace DataAccessLayer.Migrations
 
                     b.Property<string>("IconTitle")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("ImageStatus")
+                        .HasColumnType("bit");
 
                     b.HasKey("Aboutid");
 

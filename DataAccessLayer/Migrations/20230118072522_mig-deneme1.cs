@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace DataAccessLayer.Migrations
 {
-    public partial class mig1 : Migration
+    public partial class migdeneme1 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -136,7 +136,6 @@ namespace DataAccessLayer.Migrations
                 {
                     Homeid = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    SliderImage = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     SliderTitle = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     SliderComment = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Campaignid = table.Column<int>(type: "int", nullable: false),

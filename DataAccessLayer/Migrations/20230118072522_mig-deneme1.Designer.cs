@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataAccessLayer.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20230117064409_mig-image")]
-    partial class migimage
+    [Migration("20230118072522_mig-deneme1")]
+    partial class migdeneme1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -133,9 +133,6 @@ namespace DataAccessLayer.Migrations
                     b.Property<string>("SliderComment")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("SliderImage")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("SliderTitle")
                         .HasColumnType("nvarchar(max)");
 
@@ -219,9 +216,6 @@ namespace DataAccessLayer.Migrations
 
                     b.Property<DateTime>("ReviewDate")
                         .HasColumnType("datetime2");
-
-                    b.Property<string>("ReviewImage")
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ReviewMail")
                         .HasColumnType("nvarchar(max)");

@@ -2,22 +2,23 @@
 
 namespace DataAccessLayer.Migrations
 {
-    public partial class migimage : Migration
+    public partial class mig1 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.AddColumn<string>(
-                name: "ReviewImage",
-                table: "Reviews",
-                type: "nvarchar(max)",
-                nullable: true);
+            migrationBuilder.AddColumn<bool>(
+                name: "ImageStatus",
+                table: "Abouts",
+                type: "bit",
+                nullable: false,
+                defaultValue: false);
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropColumn(
-                name: "ReviewImage",
-                table: "Reviews");
+                name: "ImageStatus",
+                table: "Abouts");
         }
     }
 }

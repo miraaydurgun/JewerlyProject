@@ -1,0 +1,232 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/UserLayout.cshtml";
+}
+
+@using EntityLayer.Concrete
+@model List<Shop>
+
+
+<!DOCTYPE html>
+<html lang="zxx">
+
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Toys Shop Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+         Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <!--//meta tags ends here-->
+    <!--booststrap-->
+    <link href="~/web/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
+    <!--//booststrap end-->
+    <!-- font-awesome icons -->
+    <link href="~/web/css/fontawesome-all.min.css" rel="stylesheet" type="text/css" media="all">
+    <!-- //font-awesome icons -->
+    <!--Shoping cart-->
+    <link rel="stylesheet" href="~/web/css/shop.css" type="text/css" />
+    <!--//Shoping cart-->
+    <!--price range-->
+    <link rel="stylesheet" type="text/css" href="~/web/css/jquery-ui1.css">
+    <!--//price range-->
+    <!--stylesheets-->
+    <link href="~/web/css/style.css" rel='stylesheet' type='text/css' media="all">
+    <!--//stylesheets-->
+    <link href="http://fonts.googleapis.com/css?family=Sunflower:500,700" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+</head>
+
+
+<meta name="robots" content="noindex">
+<body>
+    <link rel="stylesheet" href="~/web/css/fontawesome-all.min.css">
+    <!-- banner -->
+    <div class="inner_page-banner">
+    </div>
+    <!--//banner -->
+    <!--show Now-->
+    <!--show Now-->
+    <section class="contact py-lg-4 py-md-3 py-sm-3 py-3">
+        <!---728x90--->
+        <!---728x90--->
+        <h3 class="title text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3">Ürünlerimiz</h3>
+        @*filtreleme menüsü gelecek*@
+        <div class="row">
+            <div class="left-ads-display col-lg-9">
+                <div class="row">
+
+                    @foreach (var item in Model)
+                    {
+                        <div class="col-lg-4 col-md-6 col-sm-6 product-men women_two">
+
+                            <div class="product-toys-info">
+                                <div class="men-pro-item">
+
+
+                                    <div class="men-thumb-item">
+                                        <img src="@item.ShopImage" class="img-thumbnail img-fluid" alt="">
+                                        <div class="men-cart-pro">
+                                            <div class="inner-men-cart-pro">
+                                                <a href="shop_single.html" class="link-product-add-cart">@item.ShopHover</a>
+                                            </div>
+                                        </div>
+                                        <span class="product-new-top">Yeni</span>
+                                    </div>
+                                    <div class="item-info-product">
+                                        <div class="info-product-price">
+                                            <div class="grid_meta">
+                                                <div class="product_price">
+                                                    <h4>
+                                                        <a href="shop_single.html">@item.ShopTitle</a>
+                                                    </h4>
+                                                    <div class="grid-price mt-2">
+                                                        <span class="money ">@item.ShopPrice</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="toys single-item hvr-outline-out">
+                                                <form action="#" method="post">
+                                                    <input type="hidden" name="cmd" value="_cart">
+                                                    <input type="hidden" name="add" value="1">
+                                                    <input type="hidden" name="toys_item" value=@item.ShopTitle>
+                                                    <input type="hidden" name="amount" value=@item.ShopPrice>
+                                                    <button type="submit" class="toys-cart ptoys-cart">
+                                                        <i class="fas fa-cart-plus"></i>
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+        <!---728x90--->
+        </div>
+    </section>
+
+    <!-- Login-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="register-form">
+                        <form action="#" method="post">
+                            <div class="fields-grid">
+                                <div class="styled-input">
+                                    <input type="text" placeholder="Your Name" name="Your Name" required="">
+                                </div>
+                                <div class="styled-input">
+                                    <input type="email" placeholder="Your Email" name="Your Email" required="">
+                                </div>
+                                <div class="styled-input">
+                                    <input type="password" placeholder="password" name="password" required="">
+                                </div>
+                                <button type="submit" class="btn subscrib-btnn">Login</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //Login-->
+    <!--js working-->
+    <script src='~/web/js/jquery-2.2.3.min.js'></script>
+    <!--//js working-->
+    <!-- cart-js -->
+    <script src="~/web/js/minicart.js"></script>
+    <script>
+        toys.render();
+
+        toys.cart.on('toys_checkout', function (evt) {
+            var items, len, i;
+
+            if (this.subtotal() > 0) {
+                items = this.items();
+
+                for (i = 0, len = items.length; i < len; i++) { }
+            }
+        });
+    </script>
+    <!-- //cart-js -->
+    <!-- price range (top products) -->
+    <script src="~/web/js/jquery-ui.js"></script>
+    <script>
+        $(window).load(function () {
+            $("#slider-range").slider({
+                range: true,
+                min: 0,
+                max: 9000,
+                values: [50, 6000],
+                slide: function (event, ui) {
+                    $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
+                }
+            });
+            $("#amount").val("$" + $("#slider-range").slider("values", 0) + " - $" + $("#slider-range").slider("values", 1));
+
+        }); //]]>
+    </script>
+    <!-- //price range (top products) -->
+    <!-- start-smoth-scrolling -->
+    <script src="~/web/js/move-top.js"></script>
+    <script src="~/web/js/easing.js"></script>
+    <script>
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+                $('html,body').animate({
+                    scrollTop: $(this.hash).offset().top
+                }, 900);
+            });
+        });
+    </script>
+    <!-- start-smoth-scrolling -->
+    <!-- here stars scrolling icon -->
+    <script>
+        $(document).ready(function () {
+
+            var defaults = {
+                containerID: 'toTop', // fading element id
+                containerHoverID: 'toTopHover', // fading element hover id
+                scrollSpeed: 1200,
+                easingType: 'linear'
+            };
+
+
+            $().UItoTop({
+                easingType: 'easeOutQuart'
+            });
+
+        });
+    </script>
+    <!-- //here ends scrolling icon -->
+    <!--bootstrap working-->
+    <script src="~/web/js/bootstrap.min.js"></script>
+    <!-- //bootstrap working-->     
+</body>
+</html>

@@ -344,10 +344,7 @@ a {
     text-decoration: none;
 }
 
-/* Callback example */
-/*.events {
-list-style: none;
-}*/
+
 .callbacks_container {
     position: relative;
     float: left;
@@ -891,13 +888,13 @@ ul.short_ls li {
 
 /*--//Premium-- */
 .img-toy-w3l-top {
-    background: url(../images/cc1.jpg)no-repeat center;
-    background-size: cover;
+    z-index: -5;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     -ms-background-size: cover;
-    height: 534px;
+    margin-left: -5%;
+    opacity: 0.6;
 }
 
 .toys-img-one {

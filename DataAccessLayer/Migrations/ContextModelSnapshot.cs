@@ -41,6 +41,9 @@ namespace DataAccessLayer.Migrations
                     b.Property<string>("IconTitle")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<bool>("ImageStatus")
+                        .HasColumnType("bit");
+
                     b.HasKey("Aboutid");
 
                     b.ToTable("Abouts");

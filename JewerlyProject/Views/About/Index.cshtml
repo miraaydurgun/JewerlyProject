@@ -1,0 +1,175 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/UserLayout.cshtml";
+}
+
+@using EntityLayer.Concrete
+@model List<About>
+
+
+<!DOCTYPE html>
+<html lang="zxx">
+
+
+
+<head>
+    <!--meta tags -->
+    <meta charset="UTF-8">
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <!--//meta tags ends here-->
+    <!--booststrap-->
+    <link href="~/web/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
+    <!--//booststrap end-->
+    <!-- font-awesome icons -->
+    <link href="~/web/css/fontawesome-all.min.css" rel="stylesheet" type="text/css" media="all">
+    <!-- //font-awesome icons -->
+    <!--Shoping cart-->
+    <link rel="stylesheet" href="~/web/css/shop.css" type="text/css" />
+    <!--//Shoping cart-->
+    <!--stylesheets-->
+    <link href="~/web/css/style.css" rel='stylesheet' type='text/css' media="all">
+    <!--//stylesheets-->
+    <link href="http://fonts.googleapis.com/css?family=Sunflower:500,700" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+</head>
+<body>
+    <meta name="robots" content="noindex">
+    <!--About -->
+    <section class="about py-lg-4 py-md-3 py-sm-3 py-3">
+       
+            <div class="container py-lg-5 py-md-4 py-sm-4 py-3">
+                <h3 class="title text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3">Hakkımızda</h3>
+                <div class="about-innergrid-agile text-center">
+                    <h4>MAĞAZAMIZA HOŞGELDİNİZ</h4>
+                @foreach (var item in Model)
+                {
+                    <p class="mb-3">
+                        @item.AboutDescription
+                    </p>
+                    <div class="img-toy-w3l-top">
+                        <img style="height:30rem; width:75rem;" src=@item.AboutImage />
+                    </div>
+                }
+                </div>
+                <div class="about-sub-inner text-center mt-lg-4 mt-3">
+
+                    <h4>
+                        DAHA HIZLI VE DAHA İYİ ALIŞVERİŞ İÇİN EN İYİ SeçeneklerİMİZİ Sıralıyoruz
+                    </h4>
+                    <div class="row">
+                    @foreach (var item in Model)
+                    {
+                        <div class="col-lg-4 col-md-4 abut-gride">
+                            <span class=@item.AboutIcon></span>
+                            <h5>@item.IconTitle</h5>
+                            <p class="mt-3">
+                                @item.IconDescription
+                            </p>
+                        </div>
+                    }
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!--//about -->
+    <!-- Modal 1-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="register-form">
+                        <form action="#" method="post">
+                            <div class="fields-grid">
+                                <div class="styled-input">
+                                    <input type="text" placeholder="Your Name" name="Your Name" required="">
+                                </div>
+                                <div class="styled-input">
+                                    <input type="email" placeholder="Your Email" name="Your Email" required="">
+                                </div>
+                                <div class="styled-input">
+                                    <input type="password" placeholder="password" name="password" required="">
+                                </div>
+                                <button type="submit" class="btn subscrib-btnn">Login</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //Modal 1-->
+    <!--js working-->
+    <script src='~/web/js/jquery-2.2.3.min.js'></script>
+    <!--//js working-->
+    <!-- cart-js -->
+    <script src="~/web/js/minicart.js"></script>
+    <script>
+        toys.render();
+
+        toys.cart.on('toys_checkout', function (evt) {
+            var items, len, i;
+
+            if (this.subtotal() > 0) {
+                items = this.items();
+
+                for (i = 0, len = items.length; i < len; i++) { }
+            }
+        });
+    </script>
+    <!-- //cart-js -->
+    <!-- start-smoth-scrolling -->
+    <script src="~/web/js/move-top.js"></script>
+    <script src="~/web/js/easing.js"></script>
+    <script>
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+                $('html,body').animate({
+                    scrollTop: $(this.hash).offset().top
+                }, 900);
+            });
+        });
+    </script>
+    <!-- start-smoth-scrolling -->
+    <!-- here stars scrolling icon -->
+    <script>
+        $(document).ready(function () {
+
+            var defaults = {
+                containerID: 'toTop', // fading element id
+                containerHoverID: 'toTopHover', // fading element hover id
+                scrollSpeed: 1200,
+                easingType: 'linear'
+            };
+
+
+            $().UItoTop({
+                easingType: 'easeOutQuart'
+            });
+
+        });
+    </script>
+    <!-- //here ends scrolling icon -->
+    <!--bootstrap working-->
+    <script src="~/web/js/bootstrap.min.js"></script>
+    <!-- //bootstrap working-->      <!-- //OnScroll-Number-Increase-JavaScript -->
+
+</body>
+</html>

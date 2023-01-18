@@ -15,9 +15,6 @@
 <head>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords" content="Toys Shop Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
-         Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
     <script>
         addEventListener("load", function () {
             setTimeout(hideURLbar, 0);
@@ -54,26 +51,28 @@
     <!-- banner -->
     <div class="inner_page-banner">
     </div>
-    <!--//banner -->
-    <!--show Now-->
-    <!--show Now-->
     <section class="contact py-lg-4 py-md-3 py-sm-3 py-3">
-        <!---728x90--->
-        <!---728x90--->
         <h3 class="title text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3">Ürünlerimiz</h3>
-        @*filtreleme menüsü gelecek*@
+        
+        @*Filtre menüsü*@
+        <ul class="filtre-menu">
+            <li><a href="#">Kolye</a></li>
+            <li><a href="#">Bileklik</a></li>
+            <li><a href="#">Yüzük</a></li>
+            <li><a href="#">Küpe</a></li>
+            <li><a href="#">Şahmeran</a></li>
+            <li><a href="#">Piercing</a></li>
+        </ul>
+        @*Filtre menüsü*@
+        <br /><br />
         <div class="row">
             <div class="left-ads-display col-lg-9">
                 <div class="row">
-
                     @foreach (var item in Model)
                     {
                         <div class="col-lg-4 col-md-6 col-sm-6 product-men women_two">
-
                             <div class="product-toys-info">
                                 <div class="men-pro-item">
-
-
                                     <div class="men-thumb-item">
                                         <img src="@item.ShopImage" class="img-thumbnail img-fluid" alt="">
                                         <div class="men-cart-pro">
@@ -116,10 +115,8 @@
                 </div>
             </div>
         </div>
-        <!---728x90--->
         </div>
     </section>
-
     <!-- Login-->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -227,6 +224,6 @@
     <!-- //here ends scrolling icon -->
     <!--bootstrap working-->
     <script src="~/web/js/bootstrap.min.js"></script>
-    <!-- //bootstrap working-->     
+    <!-- //bootstrap working-->
 </body>
 </html>

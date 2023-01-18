@@ -1057,9 +1057,24 @@ h4.typo-sub-heading {
     text-transform: capitalize;
     font-weight: 500;
 }
+/*Filtre menüsü*/
+.filtre-menu {
+    font-size:1.5rem;
+    text-align:center;
+    list-style: none;
 
+}
+        .filtre-menu li a {
+            color: #d0b48c;
+            display: inline;
+        }
+            .filtre-menu li a:hover {
+                color: #d09744;
+                display: inline;
+            }
+/*Filtre menüsü*/
 @media(max-width:1080px) {
-    h4.typo-sub-heading {
+    h4 .typo-sub-heading {
         font-size: 24px;
     }
 

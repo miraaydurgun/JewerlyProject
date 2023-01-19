@@ -109,7 +109,7 @@ ul {
 
 h1 a.navbar-brand {
     font-size: 32px;
-    color: white !important;
+    color: black !important;
     text-transform: capitalize;
     font-weight: 400;
     letter-spacing: 2px;
@@ -1059,20 +1059,70 @@ h4.typo-sub-heading {
 }
 /*Filtre menüsü*/
 .filtre-menu {
-    font-size:1.5rem;
-    text-align:center;
+    justify-content: center;
     list-style: none;
-
+    display: flex;
+    gap: 1rem; /* esnek öðeler arasýndaki boþluðu ayarlama*/
+    font-size: 1.3rem;
 }
-        .filtre-menu li a {
-            color: #d0b48c;
-            display: inline;
+
+    .filtre-menu a {
+        color: #d0b48c;
+        text-decoration: none;
+    }
+
+        .filtre-menu a::after {
+            color: #d09744;
+            content: "";
+            display: block;
+            margin: 0 auto;
+            width: 0%;
+            transition: all .4s;
+            border-bottom: 2px solid black;
         }
-            .filtre-menu li a:hover {
-                color: #d09744;
-                display: inline;
-            }
+
+        .filtre-menu a:hover::after {
+            width: 100%;
+        }
+
 /*Filtre menüsü*/
+
+/*Login*/
+/*buton*/
+    .modal-body button:hover {
+        background-color: black;
+        color: #d0b48c;
+        border-radius: 5px;
+        box-shadow: 0 0 5px #d0b48c, 0 0 25px #d0b48c, 0 0 50px #d0b48c, 0 0 100px #d0b48c;
+    }
+/*Login*/
+/*logo animasyon*/
+@keyframes go-left-right { /* bir isim ver: "go-left-right" */
+    from {
+        left: 0px;
+    }
+    /* animasyonu left: 0px'den baþlat */
+    to {
+        left: calc(55% - 50px);
+    }
+    /* animasyonu 100%-50px'de bitir */
+}
+
+.progress {
+    animation: go-left-right 2.5s infinite alternate;
+    /* "go-left-right" animasyonunu elemente ekle
+       animasyon süresi 3 saniye
+       kaç kere yapýlacaðý: sonsuz (infinite)
+       her seferinde yönünü ters çevir
+    */
+
+    position: relative;
+    width: 280px;
+    height: 50px;
+    background: #d0b48c;
+}
+/*logo animasyon*/
+
 @media(max-width:1080px) {
     h4 .typo-sub-heading {
         font-size: 24px;

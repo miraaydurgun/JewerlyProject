@@ -7,10 +7,10 @@ namespace JewelryProject.ViewComponents.Home
     public class NewArrivalListByHome:ViewComponent
     {
 
-        NewArrivalManager hm = new NewArrivalManager(new EfNewArrivalRepository());
+        NewArrivalManager nam = new NewArrivalManager(new EfNewArrivalRepository());
         public IViewComponentResult Invoke()
         {
-            var values = hm.TGetList();
+            var values = nam.TGetList();
             return View(values);
         }
     }

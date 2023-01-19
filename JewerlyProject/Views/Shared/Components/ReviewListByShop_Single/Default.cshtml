@@ -1,0 +1,45 @@
+﻿@model IEnumerable<EntityLayer.Concrete.Review>
+
+
+
+
+@foreach (var item in Model){
+
+<div class="tab2">
+    <div class="single_page">
+        <div class="bootstrap-tab-text-grids">
+            <div class="bootstrap-tab-text-grid">
+
+                <div class="bootstrap-tab-text-grid-right">
+                    <ul>
+                        <li><a href="#">@item.ReviewName</a></li>
+                    </ul>
+                    <p>
+                        @item.ReviewComment
+                    </p>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+            <div class="add-review">
+                <h4>add a review</h4>
+                <form action="#" method="post">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <input type="text" name="Name" required="">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="email" name="Email" required="">
+                        </div>
+                    </div>
+                    <textarea name="Message" required=""></textarea>
+                    <input type="submit" value="SEND">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+}
+
+
+

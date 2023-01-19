@@ -6,10 +6,10 @@ namespace JewelryProject.ViewComponents.Home
 {
     public class ReviewListByHome:ViewComponent
     {
-        ReviewManager hm = new ReviewManager(new EfReviewRepository());
+        ReviewManager rm = new ReviewManager(new EfReviewRepository());
         public IViewComponentResult Invoke()
         {
-            var values = hm.TGetList();
+            var values = rm.TGetList();
             return View(values);
         }
     }

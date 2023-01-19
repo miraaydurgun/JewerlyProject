@@ -6,10 +6,10 @@ namespace JewelryProject.ViewComponents.Home
 {
     public class CampaignListByHome:ViewComponent
     {
-        CampaignManager hm = new CampaignManager(new EfCampaignRepository());
+        CampaignManager cm = new CampaignManager(new EfCampaignRepository());
         public IViewComponentResult Invoke()
         {
-            var values = hm.TGetList();
+            var values = cm.TGetList();
             return View(values);
         }
     }

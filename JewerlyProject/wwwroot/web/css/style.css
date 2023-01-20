@@ -1086,15 +1086,40 @@ h4.typo-sub-heading {
         }
 
 /*Filtre menüsü*/
+/*shop single */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*Login*/
 /*buton*/
-    .modal-body button:hover {
-        background-color: black;
-        color: #d0b48c;
-        border-radius: 5px;
-        box-shadow: 0 0 5px #d0b48c, 0 0 25px #d0b48c, 0 0 50px #d0b48c, 0 0 100px #d0b48c;
-    }
+.modal-body button:hover {
+    background-color: black;
+    color: #d0b48c;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #d0b48c, 0 0 25px #d0b48c, 0 0 50px #d0b48c, 0 0 100px #d0b48c;
+}
 /*Login*/
 /*logo animasyon*/
 @keyframes go-left-right { /* bir isim ver: "go-left-right" */
@@ -1122,7 +1147,12 @@ h4.typo-sub-heading {
     background: #d0b48c;
 }
 /*logo animasyon*/
+/*Shop_single açýlan bar*/
+.bar ul li a {
+    color: black;
+}
 
+/*Shop_single açýlan bar*/
 @media(max-width:1080px) {
     h4 .typo-sub-heading {
         font-size: 24px;
@@ -1213,7 +1243,7 @@ footer {
 }
 
 /*-- //to-top --*/
-
+/*shopsingle sepete ekle butonu*/
 /*--responsive--*/
 @media(max-width:1920px) {
 }

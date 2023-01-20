@@ -17,6 +17,7 @@ namespace EntityLayer.Concrete
         public string ReviewComment { get; set; }
         public DateTime ReviewDate { get; set; }
         //butona onclick
+        public string UserImage { get; set; }
 
         public List<Home> Homes { get; set; }
 

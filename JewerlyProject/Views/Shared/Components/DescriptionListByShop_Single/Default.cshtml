@@ -1,13 +1,14 @@
 ﻿@model IEnumerable<EntityLayer.Concrete.Description>
 
-@foreach (var item in Model){
-<div class="tab1">
-    <div class="single_page">
-        <h6>@item.DescriptionTitle</h6>
-        <p>
-            @item.DescriptionComment
-        </p>
+@foreach (var item in Model)
+{
+    <div class="tab1">
+        <div class="single_page">
+            <h6>@item.DescriptionTitle</h6>
+            <p>
+               @item.DescriptionComment
+            </p>
+        </div>
     </div>
-</div>
-    }
+}
 

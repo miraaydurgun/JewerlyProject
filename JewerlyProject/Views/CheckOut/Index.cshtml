@@ -8,304 +8,138 @@
 @model List<CheckOut>
 
 
-<!DOCTYPE html>
-<html lang="zxx">
-<head>
-    <!--meta tags -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords" content="Toys Shop Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
-         Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-    <script>
-        addEventListener("load", function () {
-            setTimeout(hideURLbar, 0);
-        }, false);
 
-        function hideURLbar() {
-            window.scrollTo(0, 1);
-        }
-    </script>
-    <!--//meta tags ends here-->
-    <!--booststrap-->
-    <link href="~/web/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
-    <!--//booststrap end-->
-    <!-- font-awesome icons -->
-    <link href="~/web/css/fontawesome-all.min.css" rel="stylesheet" type="text/css" media="all">
-    <!-- //font-awesome icons -->
-    <!--Shoping cart-->
-    <link rel="stylesheet" href="~/web/css/shop.css" type="text/css" />
-    <!--//Shoping cart-->
-    <!--checkout-->
-    <link rel="stylesheet" type="text/css" href="~/web/css/checkout.css">
-    <!--//checkout-->
-    <!--stylesheets-->
-    <link href="~/web/css/style.css" rel='stylesheet' type='text/css' media="all">
-    <!--//stylesheets-->
-    <link href="//fonts.googleapis.com/css?family=Sunflower:500,700" rel="stylesheet">
-    <link href="//fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
-</head>
-<body>
-
-    <!--Checkout-->
     <!-- //banner -->
     <!-- top Products -->
     <section class="checkout py-lg-4 py-md-3 py-sm-3 py-3">
         <div class="container py-lg-5 py-md-4 py-sm-4 py-3">
 
             <div class="shop_inner_inf">
+            @foreach (var item in Model)
+            {
 
-                <div class="privacy about">
+                        <div class="privacy about">
 
-                    <div class="checkout-right">
-                        <h4>Sepetinizdeki Ürünler: <span>3 Ürün</span></h4>
-                        <table class="timetable_sub">
-                            <thead>
-                                <tr>
-                                    <th>Ürün Id</th>
-                                    <th>Ürün Resmi</th>
-                                    <th>Quality</th>
-                                    <th>Ürün Adı</th>
-                                    <th>Fiyatı</th>
-                                    <th>Sil</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="rem1">
-                                    <td class="invert">1</td>
-                                    <td class="invert-image"><a href="single.html"><img src="images/f1.jpg" alt=" " class="img-responsive"></a></td>
-                                    <td class="invert">
-                                        <div class="quantity">
-                                            <div class="quantity-select">
-                                                <div class="entry value-minus">&nbsp;</div>
-                                                <div class="entry value"><span>1</span></div>
-                                                <div class="entry value-plus active">&nbsp;</div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="invert">Bella Toes</td>
-                                    <td class="invert">$675.00</td>
-                                    <td class="invert">
-                                        <div class="rem">
-                                            <div class="close1"> </div>
-                                        </div>
-                                    </td>
-                                </tr>
+                                                <div class="checkout-right">
+                                                    <h4>Sepetinizdeki Ürünler: <span>3 Ürün</span></h4>
+                                                    <table class="timetable_sub">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Ürün Id</th>
+                                                                <th>Ürün Resmi</th>
+                                                                <th>Quality</th>
+                                                                <th>Ürün Adı</th>
+                                                                <th>Fiyatı</th>
+                                                                <th>Sil</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="rem1">
+                                                                <td class="invert">1</td>
+                                                                <td class="invert-image"><a href="CheckOut/Index"><img src="images/f1.jpg" alt=" " class="img-responsive"></a></td>
+                                                                <td class="invert">
+                                                                    <div class="quantity">
+                                                                        <div class="quantity-select">
+                                                                            <div class="entry value-minus">&nbsp;</div>
+                                                                            <div class="entry value"><span>1</span></div>
+                                                                            <div class="entry value-plus active">&nbsp;</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="invert">Bella Toes</td>
+                                                                <td class="invert">$675.00</td>
+                                                                <td class="invert">
+                                                                    <div class="rem">
+                                                                        <div class="close1"> </div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
 
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="checkout-left">
-                        <div class="col-md-4 checkout-left-basket">
-                            <h4>Sepete Eklemeye Devam Et</h4>
-                            <ul>
-                                <li>Product1 <i>-</i> <span>$675.00 </span></li>
-                                <li>Product2 <i>-</i> <span>$325.00 </span></li>
-                                <li>Product3 <i>-</i> <span>$405.00 </span></li>
-                                <li>Total Service Charges <i>-</i> <span>$55.00</span></li>
-                                <li>Total <i>-</i> <span></span>Toplam Tutar</li>
-                            </ul>
-                        </div>
-                        <div class="col-md-8 address_form">
-                            <h4>Add a new Details</h4>
-                            <form action="payment.html" method="post" class="creditly-card-form agileinfo_form">
-                                <section class="creditly-wrapper wrapper">
-                                    <div class="information-wrapper">
-                                        <div class="first-row form-group">
-                                            <div class="controls">
-                                                <label class="control-label">Ad Soyad: </label>
-                                                <input class="billing-address-name form-control" type="text" name="name" placeholder="Ad Soyad">
-                                            </div>
-                                            <div class="card_number_grids">
-                                                <div class="card_number_grid_left">
-                                                    <div class="controls">
-                                                        <label class="control-label">Telefon Numarası:</label>
-                                                        <input class="form-control" type="text" placeholder="Telefon Numarası">
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <div class="checkout-left">
+                                                    <div class="col-md-4 checkout-left-basket">
+                                                        <h4>Sepete Eklemeye Devam Et</h4>
+                                                        <ul>
+                                                            <li>Product1 <i>-</i> <span>$675.00 </span></li>
+                                                            <li>Product2 <i>-</i> <span>$325.00 </span></li>
+                                                            <li>Product3 <i>-</i> <span>$405.00 </span></li>
+                                                            <li>Total Service Charges <i>-</i> <span>$55.00</span></li>
+                                                            <li>Total <i>-</i> <span></span>Toplam Tutar</li>
+                                                        </ul>
                                                     </div>
-                                                </div>
+                                                    <div class="col-md-8 address_form">
+                                                        <h4>Add a new Details</h4>
+                                                        <form action="#" method="post" class="creditly-card-form agileinfo_form">
+                                                            <section class="creditly-wrapper wrapper">
+                                                                <div class="information-wrapper">
+                                                                    <div class="first-row form-group">
+                                                                        <div class="controls">
+                                                                            <label class="control-label">Ad Soyad: </label>
+                                                                            <input class="billing-address-name form-control" type="text" name="name" placeholder="Ad Soyad">
+                                                                        </div>
+                                                                        <div class="card_number_grids">
+                                                                            <div class="card_number_grid_left">
+                                                                                <div class="controls">
+                                                                                    <label class="control-label">Telefon Numarası:</label>
+                                                                                    <input class="form-control" type="text" placeholder="Telefon Numarası">
+                                                                                </div>
+                                                                            </div>
 
-                                            </div>
-                                            <div class="card_number_grid_right">
-                                                <div class="controls">
-                                                    <label class="control-label">Ülke: </label>
-                                                    <input class="form-control" type="text" placeholder="Ülke">
-                                                </div>
-                                                <div class="controls">
-                                                    <label class="control-label">Şehir: </label>
-                                                    <input class="form-control" type="text" placeholder="Şehir">
-                                                </div>
-                                                @* <div class="controls">
-                                                <label class="control-label">Kayıtlı Adres: </label>
-                                                <select class="form-control option-w3ls">
-                                                <option>İş</option>
-                                                <option>Ev</option>
-                                                <option>Diğer</option>
-                                                </select>
-                                                </div>*@
-                                                <div class="controls">
-                                                    <label class="control-label">Adres: </label>
-                                                    <input class="form-control" type="text" placeholder="Adres">
-                                                </div>
-                                            </div>
-                                            <div class="clear"> </div>
-                                        </div>
+                                                                        </div>
+                                                                        <div class="card_number_grid_right">
+                                                                            <div class="controls">
+                                                                                <label class="control-label">Ülke: </label>
+                                                                                <input class="form-control" type="text" placeholder="Ülke">
+                                                                            </div>
+                                                                            <div class="controls">
+                                                                                <label class="control-label">Şehir: </label>
+                                                                                <input class="form-control" type="text" placeholder="Şehir">
+                                                                            </div>
 
-                                    </div>
-                            </form>
-                            <button class="submit check_out">Bu Adrese Yolla</button>
+                                                                            <div class="controls">
+                                                                                <label class="control-label">Adres: </label>
+                                                                                <input class="form-control" type="text" placeholder="Adres">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="clear"> </div>
+                                                                    </div>
 
-                           
-                        </div>
-    </section>
-    
-    <div class="checkout-right-basket">
-        <a href="payment.html">Ödeme Yap </a>
-    </div>
-    </div>
-    <div class="clearfix"> </div>
-    <div class="clearfix"></div>
-    </div>
+                                                                </div> </section>
+                                                        </form>
+                                                        <button class="submit check_out" onclick="delivery()">Bu Adrese Yolla</button>
 
 
 
-    </div>
+                                                                                </div>
 
-    </div>}
+
+                                                                            </div>
+
+
+                                                    <div class="checkout-right-basket">
+                                                        <a href="/CheckOut/Index">Ödeme Yap </a>
+                                                    </div>
+
+                                                    <div class="clearfix"> </div>
+                                                    <div class="clearfix"></div>
+
+
+                                 </div>
+
+            }   
+            </div>
     <!-- //top products -->
     </div>
+
+
+     <script type="text/javascript">
+
+                                   function delivery(){
+                                       alert("Siparişiniz alınmıştır");
+                                   }
+
+                                </script>
     </section>
 
-
-    <!-- Login-->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Login</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="register-form">
-                        <form action="#" method="post">
-                            <div class="fields-grid">
-                                <div class="styled-input">
-                                    <input type="text" placeholder="Your Name" name="Your Name" required="">
-                                </div>
-                                <div class="styled-input">
-                                    <input type="email" placeholder="Your Email" name="Your Email" required="">
-                                </div>
-                                <div class="styled-input">
-                                    <input type="password" placeholder="password" name="password" required="">
-                                </div>
-                                <button type="submit" class="btn subscrib-btnn">Login</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- //Login-->
-    <!--js working-->
-    <script src='~/web/js/jquery-2.2.3.min.js'></script>
-    <!--//js working-->
-    <!-- cart-js -->
-    <script src="~/web/js/minicart.js"></script>
-    <script>
-        toys.render();
-
-        toys.cart.on('toys_checkout', function (evt) {
-            var items, len, i;
-
-            if (this.subtotal() > 0) {
-                items = this.items();
-
-                for (i = 0, len = items.length; i < len; i++) { }
-            }
-        });
-    </script>
-    <!--// cart-js -->
-    <!--quantity-->
-    <script>
-        $('.value-plus').on('click', function () {
-            var divUpd = $(this).parent().find('.value'),
-                newVal = parseInt(divUpd.text(), 10) + 1;
-            divUpd.text(newVal);
-        });
-
-        $('.value-minus').on('click', function () {
-            var divUpd = $(this).parent().find('.value'),
-                newVal = parseInt(divUpd.text(), 10) - 1;
-            if (newVal >= 1) divUpd.text(newVal);
-        });
-    </script>
-    <!--quantity-->
-    <!--closed-->
-    <script>
-        $(document).ready(function (c) {
-            $('.close1').on('click', function (c) {
-                $('.rem1').fadeOut('slow', function (c) {
-                    $('.rem1').remove();
-                });
-            });
-        });
-    </script>
-    <script>
-        $(document).ready(function (c) {
-            $('.close2').on('click', function (c) {
-                $('.rem2').fadeOut('slow', function (c) {
-                    $('.rem2').remove();
-                });
-            });
-        });
-    </script>
-    <script>
-        $(document).ready(function (c) {
-            $('.close3').on('click', function (c) {
-                $('.rem3').fadeOut('slow', function (c) {
-                    $('.rem3').remove();
-                });
-            });
-        });
-    </script>
-    <!--//closed-->
-    <!-- start-smoth-scrolling -->
-    <script src="~/web/js/move-top.js"></script>
-    <script src="~/web/js/easing.js"></script>
-    <script>
-        jQuery(document).ready(function ($) {
-            $(".scroll").click(function (event) {
-                event.preventDefault();
-                $('html,body').animate({
-                    scrollTop: $(this.hash).offset().top
-                }, 900);
-            });
-        });
-    </script>
-    <!-- start-smoth-scrolling -->
-    <!-- here stars scrolling icon -->
-    <script>
-        $(document).ready(function () {
-
-            var defaults = {
-                containerID: 'toTop', // fading element id
-                containerHoverID: 'toTopHover', // fading element hover id
-                scrollSpeed: 1200,
-                easingType: 'linear'
-            };
-            $().UItoTop({
-                easingType: 'easeOutQuart'
-            });
-
-        });
-    </script>
-    <!-- //here ends scrolling icon -->
-    <!--bootstrap working-->
-    <script src="~/web/js/bootstrap.min.js"></script>
-    <!-- //bootstrap working-->
-</body>
-</html>

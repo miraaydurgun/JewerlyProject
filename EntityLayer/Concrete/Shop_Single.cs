@@ -24,7 +24,6 @@ namespace EntityLayer.Concrete
         public int Informationid { get; set; }
         public Information Information { get; set; }
 
-
-
+       
     }
 }

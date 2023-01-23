@@ -25,7 +25,7 @@ namespace DataAccessLayer.EntityFramework
         {
             using (var c = new Context())
             {
-                return c.Homes.Include(x => x.Campaign).ToList();
+                return c.Homes.Include(x => x.NewArrival).ToList();
             }
         }
 
@@ -33,7 +33,7 @@ namespace DataAccessLayer.EntityFramework
         {
             using (var c = new Context())
             {
-                return c.Homes.Include(x => x.Campaign).ToList();
+                return c.Homes.Include(x => x.Review).ToList();
             }
         }
     }

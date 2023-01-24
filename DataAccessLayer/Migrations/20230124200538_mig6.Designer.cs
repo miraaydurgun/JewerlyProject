@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataAccessLayer.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20230124111047_mig100")]
-    partial class mig100
+    [Migration("20230124200538_mig6")]
+    partial class mig6
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -70,36 +70,19 @@ namespace DataAccessLayer.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("COAddress")
-                        .HasColumnType("int");
+                    b.Property<string>("COAddress")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("COAddressName")
-                        .HasColumnType("int");
+                    b.Property<string>("COCity")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("COButton")
-                        .HasColumnType("int");
-
-                    b.Property<int>("COCity")
-                        .HasColumnType("int");
-
-                    b.Property<int>("COCountry")
-                        .HasColumnType("int");
-
-                    b.Property<int>("COName")
-                        .HasColumnType("int");
+                    b.Property<string>("COName")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("COPhone")
                         .HasColumnType("int");
 
-                    b.Property<int>("COPriceTotal")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Shop_Singleid")
-                        .HasColumnType("int");
-
                     b.HasKey("CheckOutid");
-
-                    b.HasIndex("Shop_Singleid");
 
                     b.ToTable("CheckOuts");
                 });
@@ -252,11 +235,11 @@ namespace DataAccessLayer.Migrations
                     b.Property<string>("ReviewMail")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("ReviewMailStatus")
-                        .HasColumnType("bit");
-
                     b.Property<string>("ReviewName")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("ReviewStatus")
+                        .HasColumnType("bit");
 
                     b.Property<string>("UserImage")
                         .HasColumnType("nvarchar(max)");
@@ -308,9 +291,6 @@ namespace DataAccessLayer.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("CheckOutid")
-                        .HasColumnType("int");
-
                     b.Property<int>("Descriptionid")
                         .HasColumnType("int");
 
@@ -328,8 +308,6 @@ namespace DataAccessLayer.Migrations
 
                     b.HasKey("Shop_Singleid");
 
-                    b.HasIndex("CheckOutid");
-
                     b.HasIndex("Descriptionid");
 
                     b.HasIndex("Informationid");
@@ -337,17 +315,6 @@ namespace DataAccessLayer.Migrations
                     b.HasIndex("Reviewid");
 
                     b.ToTable("Shop_Singles");
-                });
-
-            modelBuilder.Entity("EntityLayer.Concrete.CheckOut", b =>
-                {
-                    b.HasOne("EntityLayer.Concrete.Shop_Single", "Shop_Single")
-                        .WithMany()
-                        .HasForeignKey("Shop_Singleid")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Shop_Single");
                 });
 
             modelBuilder.Entity("EntityLayer.Concrete.Home", b =>
@@ -390,10 +357,6 @@ namespace DataAccessLayer.Migrations
 
             modelBuilder.Entity("EntityLayer.Concrete.Shop_Single", b =>
                 {
-                    b.HasOne("EntityLayer.Concrete.CheckOut", null)
-                        .WithMany("Shop_Singles")
-                        .HasForeignKey("CheckOutid");
-
                     b.HasOne("EntityLayer.Concrete.Description", "Description")
                         .WithMany("Shop_Singles")
                         .HasForeignKey("Descriptionid")
@@ -422,11 +385,6 @@ namespace DataAccessLayer.Migrations
             modelBuilder.Entity("EntityLayer.Concrete.Campaign", b =>
                 {
                     b.Navigation("Homes");
-                });
-
-            modelBuilder.Entity("EntityLayer.Concrete.CheckOut", b =>
-                {
-                    b.Navigation("Shop_Singles");
                 });
 
             modelBuilder.Entity("EntityLayer.Concrete.Description", b =>

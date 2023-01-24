@@ -1128,7 +1128,7 @@ h4.typo-sub-heading {
     }
     /* animasyonu left: 0px'den baþlat */
     to {
-        left: calc(55% - 50px);
+        left: calc(45% - 50px);
     }
     /* animasyonu 100%-50px'de bitir */
 }

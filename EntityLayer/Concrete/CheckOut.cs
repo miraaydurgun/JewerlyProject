@@ -11,19 +11,9 @@ namespace EntityLayer.Concrete
     {
         [Key]
         public int CheckOutid { get; set; }
-        public int COName { get; set; }
+        public string COName { get; set; }
         public int COPhone { get; set; }
-        public int COCountry { get; set; }
-        public int COCity { get; set; }
-        public int COAddressName { get; set; }
-        public int COAddress { get; set; }
-
-        public int COButton { get; set; }
-        public int COPriceTotal { get; set; }
-
-        public int Shop_Singleid { get; set; }
-        public Shop_Single Shop_Single { get; set; }
-        public List<Shop_Single> Shop_Singles { get; set; }
-
+        public string COCity { get; set; }
+        public string COAddress { get; set; }
     }
 }

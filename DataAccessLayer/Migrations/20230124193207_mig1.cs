@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace DataAccessLayer.Migrations
 {
-    public partial class mig100 : Migration
+    public partial class mig1 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -118,9 +118,9 @@ namespace DataAccessLayer.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     ReviewName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ReviewMail = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ReviewMailStatus = table.Column<bool>(type: "bit", nullable: false),
                     ReviewComment = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ReviewDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    ReviewStatus = table.Column<bool>(type: "bit", nullable: false),
                     UserImage = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
@@ -205,13 +205,13 @@ namespace DataAccessLayer.Migrations
                 {
                     CheckOutid = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    COName = table.Column<int>(type: "int", nullable: false),
+                    COName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     COPhone = table.Column<int>(type: "int", nullable: false),
-                    COCountry = table.Column<int>(type: "int", nullable: false),
-                    COCity = table.Column<int>(type: "int", nullable: false),
-                    COAddressName = table.Column<int>(type: "int", nullable: false),
-                    COAddress = table.Column<int>(type: "int", nullable: false),
-                    COButton = table.Column<int>(type: "int", nullable: false),
+                    COCountry = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    COCity = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    COAddressName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    COAddress = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    COButton = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     COPriceTotal = table.Column<int>(type: "int", nullable: false),
                     Shop_Singleid = table.Column<int>(type: "int", nullable: false)
                 },

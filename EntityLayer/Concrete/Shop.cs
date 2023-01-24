@@ -11,10 +11,10 @@ namespace EntityLayer.Concrete
     {
         [Key]
         public int Shopid { get; set; }
-        public string ShopImage { get; set; }//
+        public string ShopImage { get; set; }
         public string ShopHover { get; set; }
-        public string ShopTitle { get; set; }//
-        public decimal ShopPrice { get; set; }//
+        public string ShopTitle { get; set; }
+        public decimal ShopPrice { get; set; }
         public string ShopCartIcon { get; set; }
         public bool ShopStatus { get; set; }
 

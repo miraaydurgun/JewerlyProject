@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataAccessLayer.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20230124112354_mig1")]
+    [Migration("20230124193207_mig1")]
     partial class mig1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -70,23 +70,23 @@ namespace DataAccessLayer.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("COAddress")
-                        .HasColumnType("int");
+                    b.Property<string>("COAddress")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("COAddressName")
-                        .HasColumnType("int");
+                    b.Property<string>("COAddressName")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("COButton")
-                        .HasColumnType("int");
+                    b.Property<string>("COButton")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("COCity")
-                        .HasColumnType("int");
+                    b.Property<string>("COCity")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("COCountry")
-                        .HasColumnType("int");
+                    b.Property<string>("COCountry")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("COName")
-                        .HasColumnType("int");
+                    b.Property<string>("COName")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("COPhone")
                         .HasColumnType("int");

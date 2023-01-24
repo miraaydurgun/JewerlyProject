@@ -1,0 +1,98 @@
+﻿@model IEnumerable<EntityLayer.Concrete.Shop>
+
+
+
+<div class="col-lg-4 single-right-left ">
+    <div class="grid images_3_of_2">
+        @foreach (var item in Model)
+        {
+            <div class="flexslider1">
+                <ul class="slides">
+                    <li>
+                        <div class="thumb-image"> <img src=@item.ShopImage data-imagezoom="true" class="img-fluid" alt=" "> </div>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+        }
+    </div>
+</div>
+
+<div class="col-lg-8 single-right-left simpleCart_shelfItem">
+    <br>
+    <br>
+    <br>
+    <br>
+    @foreach (var item in Model)
+    {
+        <h3 style="color:#d0b48c;">@item.ShopTitle</h3>
+        <p>
+            <span class="item_price">@item.ShopPrice</span>
+        </p>
+    }
+    <div class="occasional">
+        <h5 style="color:#d0b48c;">Renk :</h5>
+        <div class="colr ert">
+            <label class="radio"><input type="radio" name="radio"> Altın</label>
+        </div>
+        <div class="colr">
+            <label class="radio"><input type="radio" name="radio"> Gümüş</label>
+        </div>
+        <div class="colr">
+            <label class="radio"><input type="radio" name="radio"> Bronz</label>
+        </div>
+        <br />
+        <div class="clearfix"> </div>
+    </div>
+    <br />
+    <br />
+    <br />
+
+    <div class="occasion-cart">
+        <div class="toys single-item singlepage">
+            <form action="#" method="post">
+                <input type="hidden" name="cmd" value="_cart">
+                <input type="hidden" name="add" value="1">
+                <input type="hidden" name="toys_item" value="Farenheit">
+                <input type="hidden" name="amount" value="575">
+                <button type="submit" class="toys-cart ptoys-cart add">
+                    Sepete ekle
+                </button>
+            </form>
+        </div>
+    </div>
+    @*sosyal medya ikon*@
+    <ul class="footer-social text-left mt-lg-4 mt-3">
+        <li style="color:#d0b48c;"><b>Paylaş: </b></li>
+        <li class="mx-1">
+            <a href="#">
+                <span class="fab fa-facebook-f"></span>
+            </a>
+        </li>
+        <li class="">
+            <a href="#">
+                <span class="fab fa-twitter"></span>
+            </a>
+        </li>
+        <li class="mx-1">
+            <a href="#">
+                <span class="fab fa-google-plus-g"></span>
+            </a>
+        </li>
+        <li class="">
+            <a href="#">
+                <span class="fab fa-linkedin-in"></span>
+            </a>
+        </li>
+        <li class="mx-1">
+            <a href="#">
+                <span class="fas fa-rss"></span>
+            </a>
+        </li>
+    </ul>
+    @*//sosyal medya ikon*@
+    <br />
+    <br />
+    <br />
+</div>
+<div class="clearfix"> </div>

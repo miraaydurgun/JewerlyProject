@@ -3,166 +3,65 @@
     Layout = "~/Views/Shared/UserLayout.cshtml";
 }
 
-@using EntityLayer.Concrete
 
-@model IEnumerable<EntityLayer.Concrete.Shop>
-
-
-@*   @model List<Contact>*@
-
-    <section class="banner-bottom py-lg-5 py-3">
-        <!---728x90--->
-
-        <div class="container">
-        @foreach (var item in Model)
-        {
-                <!---728x90--->
-                <div class="inner-sec-shop pt-lg-4 pt-3">
-                    <div class="row">
-                        <div class="col-lg-4 single-right-left ">
-                            <div class="grid images_3_of_2">
-                                <div class="flexslider1">
-                                    <ul class="slides">
-                                        <li>
-                                            <div class="thumb-image"> <img src="~/web/images/2.jpeg" data-imagezoom="true" class="img-fluid" alt=" "> </div>
-                                        </li>
-                                    </ul>
-
-
-                                    <div class="clearfix"></div>
-                                </div>
-                            </div>
+<section class="banner-bottom py-lg-5 py-3">
+    <div class="container">
+        <div class="inner-sec-shop pt-lg-4 pt-3">
+            <div class="row">
+                @await Component.InvokeAsync("ShopListByShop_Single")
+                @*----------------------RESPONSİVE NAVBAR-------------------------------------------------------------*@
+                <div class="bar">
+                    <a href="https://getbootstrap.com/docs/4.0/components/navs/#tabs" target="_blank" />
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item">
+                            <a href="#Description" role="tab" data-toggle="tab"
+                               class="nav-link active" style="color:#d0b48c;">Açıklama</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#Reviews" role="tab" data-toggle="tab"
+                               class="nav-link" style="color:#d0b48c;">Yorumlar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#Information" role="tab" data-toggle="tab"
+                               class="nav-link" style="color:#d0b48c;">Ürün Bilgisi</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <br />
+                        @*Description*@
+                        <div class="tab-pane active" role="tabpanel" id="Description">
+                            @await Component.InvokeAsync("DescriptionListByShop_Single")
                         </div>
-
-                     
-                        <div class="col-lg-8 single-right-left simpleCart_shelfItem">
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <h3 style="color:#d0b48c;">@item.ShopTitle</h3>
-                            <p>
-                                <span class="item_price">@item.ShopPrice</span>
-                            </p>
-                            <div class="occasional">
-                                <h5 style="color:#d0b48c;">Renk :</h5>
-                                <div class="colr ert">
-                                    <label class="radio"><input type="radio" name="radio"> Altın</label>
-                                </div>
-                                <div class="colr">
-                                    <label class="radio"><input type="radio" name="radio"> Gümüş</label>
-                                </div>
-                                <div class="colr">
-                                    <label class="radio"><input type="radio" name="radio"> Bronz</label>
-                                </div>
-                                <br />
-                                <div class="clearfix"> </div>
-                            </div>
-                            <div class="occasion-cart">
-                                <div class="toys single-item singlepage">
-                                    <form action="#" method="post">
-                                        <input type="hidden" name="cmd" value="_cart">
-                                        <input type="hidden" name="add" value="1">
-                                    <input type="hidden" name="toys_item" value="@item.ShopTitle">
-                                    <input type="hidden" name="amount" value="@item.ShopPrice">
-                                        <button type="submit" class="toys-cart ptoys-cart add">
-                                            Sepete ekle
-                                        </button>
-                                    </form>
-                                </div>
-                            </div>
-                        @*sosyal medya ikon*@
-                            <ul class="footer-social text-left mt-lg-4 mt-3">
-                                <li style="color:#d0b48c;"><b>Paylaş: </b></li>
-                                <li class="mx-1">
-                                    <a href="#">
-                                        <span class="fab fa-facebook-f"></span>
-                                    </a>
-                                </li>
-                                <li class="">
-                                    <a href="#">
-                                        <span class="fab fa-twitter"></span>
-                                    </a>
-                                </li>
-                                <li class="mx-1">
-                                    <a href="#">
-                                        <span class="fab fa-google-plus-g"></span>
-                                    </a>
-                                </li>
-                                <li class="">
-                                    <a href="#">
-                                        <span class="fab fa-linkedin-in"></span>
-                                    </a>
-                                </li>
-                                <li class="mx-1">
-                                    <a href="#">
-                                        <span class="fas fa-rss"></span>
-                                    </a>
-                                </li>
-                            </ul>
-                        @*//sosyal medya ikon*@
+                        @*Description*@
+                        @*Reviews*@
+                        <div class="tab-pane" role="tabpanel" id="Reviews">
                             <br />
-                            <br />
-                            <br />
+                            @await Component.InvokeAsync("ReviewListByShop_Single")
                         </div>
-                        <div class="clearfix"> </div>
-                        <!--/tabs-->
-                    @*----------------------RESPONSİVE NAVBAR---------------------------------------------------------------------------------------------------------------*@
-                        <div class="bar">
-                            <a href="https://getbootstrap.com/docs/4.0/components/navs/#tabs" target="_blank" />
-                            <ul class="nav nav-tabs" role="tablist">
-                                <li class="nav-item">
-                                    <a href="#Description" role="tab" data-toggle="tab"
-                                   class="nav-link active" style="color:#d0b48c;">Açıklama</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#Reviews" role="tab" data-toggle="tab"
-                                   class="nav-link" style="color:#d0b48c;">Yorumlar</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#Information" role="tab" data-toggle="tab"
-                                   class="nav-link" style="color:#d0b48c;">Ürün Bilgisi</a>
-                                </li>
-                            </ul>
-                            <div class="tab-content">
-                                <br />
-                            @*Description*@
-                                <div class="tab-pane active" role="tabpanel" id="Description">
-                                @await Component.InvokeAsync("DescriptionListByShop_Single")
-                                </div>
-                            @*Description*@
-                            @*Reviews*@
-                                <div class="tab-pane" role="tabpanel" id="Reviews">
-                                    <br />
-                                @await Component.InvokeAsync("ReviewListByShop_Single")
-                                </div>
-                            @*Reviews*@
+                        @*Reviews*@
+                        @*Information*@
+                        <div class="tab-pane" role="tabpanel" id="Information">
+                            <br />
+                            @await Component.InvokeAsync("InformationListByShop_Single")
                             @*Information*@
-                                <div class="tab-pane" role="tabpanel" id="Information">
-                                    <br />
-                                @await Component.InvokeAsync("InformationListByShop_Single")
-                                @*Information*@
-
-                                </div>
-                            </div>
                         </div>
-                        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-                            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-                            crossorigin="anonymous">
-                        </script>
-                        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-                            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-                            crossorigin="anonymous">
-                        </script>
-                        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-                            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-                            crossorigin="anonymous">
-                        </script>
-                    @*-----------------------------------------------------------------------------------------------------------------------------------------------------*@
-
                     </div>
                 </div>
-        }
+                <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+                        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+                        crossorigin="anonymous">
+                </script>
+                <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+                        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+                        crossorigin="anonymous">
+                </script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+                        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+                        crossorigin="anonymous">
+                </script>
+                @*-----------------------------------------------------------------------------------------------------------------------------------------------------*@
+            </div>
         </div>
-    </section>
+    </div>
+</section>
 

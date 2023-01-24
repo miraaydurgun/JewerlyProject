@@ -14,15 +14,16 @@
                 <h3 class="title text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3">Hakkımızda</h3>
                 <div class="about-innergrid-agile text-center">
                     <h4>MAĞAZAMIZA HOŞGELDİNİZ</h4>
-                @foreach (var item in Model)
-                {
+                
                     <p class="mb-3">
-                        @item.AboutDescription
-                    </p>
+                Altınbaş Kuyumculuk, kurulduğu ilk günden bu yana markalaşma ve mağazalaşma faaliyetleri, sektöre getirdiği yenilikler ve ilkler ile bugün yurtiçinde 110,  yurt dışında 20 konsept mağazası ile sürekli büyümeye devam eden global bir markadır.
+
+                Altınbaş ailesinin 1950'lerde Gaziantep'te ziynet ve takı toptan alım satım işine girişi ile Altınbaş Kuyumculuk'un temelleri atılmıştır. 1975 yılında da, Altınbaş mücevherat perakende sektörüne hızlı bir giriş yapmış, bugün tüm dünyaya yayılan konsept mağazacılığın temellerini atmıştır.
+            </p>
                     <div class="img-toy-w3l-top">
-                        <img style="height:30rem; width:75rem;" src=@item.AboutImage />
+                        <img style="height:30rem; width:75rem;" src="/web/images/store.jpg">
                     </div>
-                }
+                
                 </div>
                 <div class="about-sub-inner text-center mt-lg-4 mt-3">
 
@@ -33,7 +34,7 @@
                     @foreach (var item in Model)
                     {
                         <div class="col-lg-4 col-md-4 abut-gride">
-                            <span class=@item.AboutIcon></span>
+                            <span class="@item.AboutIcon"></span>
                             <h5>@item.IconTitle</h5>
                             <p class="mt-3">
                                 @item.IconDescription

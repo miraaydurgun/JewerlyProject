@@ -5,7 +5,7 @@
 
 
 @using EntityLayer.Concrete
-@model List<CheckOut>
+@model IEnumerable<EntityLayer.Concrete.Shop>
 
 
 
@@ -21,7 +21,7 @@
                         <div class="privacy about">
 
                                                 <div class="checkout-right">
-                                                    <h4>Sepetinizdeki Ürünler: <span>3 Ürün</span></h4>
+                                                    <h4>Sepetinizdeki Ürünler: </h4>
                                                     <table class="timetable_sub">
                                                         <thead>
                                                             <tr>
@@ -35,8 +35,8 @@
                                                         </thead>
                                                         <tbody>
                                                             <tr class="rem1">
-                                                                <td class="invert">1</td>
-                                                                <td class="invert-image"><a href="CheckOut/Index"><img src="images/f1.jpg" alt=" " class="img-responsive"></a></td>
+                                                                <td class="invert">@item.Shop_Singleid</td>
+                                                                <td class="invert-image"><a href="/CheckOut/Index"><img src="@item.ShopImage" alt=" " class="img-responsive"></a></td>
                                                                 <td class="invert">
                                                                     <div class="quantity">
                                                                         <div class="quantity-select">
@@ -46,8 +46,8 @@
                                                                         </div>
                                                                     </div>
                                                                 </td>
-                                                                <td class="invert">Bella Toes</td>
-                                                                <td class="invert">$675.00</td>
+                                                                <td class="invert">@item.ShopTitle</td>
+                                                                <td class="invert">@item.ShopPrice</td>
                                                                 <td class="invert">
                                                                     <div class="rem">
                                                                         <div class="close1"> </div>

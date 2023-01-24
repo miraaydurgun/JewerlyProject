@@ -26,13 +26,7 @@ namespace DataAccessLayer.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("AboutDescription")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("AboutIcon")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("AboutImage")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("IconDescription")
@@ -40,9 +34,6 @@ namespace DataAccessLayer.Migrations
 
                     b.Property<string>("IconTitle")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("ImageStatus")
-                        .HasColumnType("bit");
 
                     b.HasKey("Aboutid");
 

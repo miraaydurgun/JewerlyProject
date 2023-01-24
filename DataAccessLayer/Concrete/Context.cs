@@ -26,7 +26,6 @@ namespace DataAccessLayer.Concrete
         public DbSet<Review> Reviews { get; set; }
         public DbSet<Shop> Shops { get; set; }
         public DbSet<Shop_Single> Shop_Singles { get; set; }
-
         public DbSet<CheckOut> CheckOuts { get; set; }
 
 

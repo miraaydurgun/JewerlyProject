@@ -5,7 +5,7 @@
 
 @using EntityLayer.Concrete
 
-@model List<Shop_Single>
+@model IEnumerable<EntityLayer.Concrete.Shop>
 
 
 @*   @model List<Contact>*@
@@ -40,9 +40,9 @@
                             <br>
                             <br>
                             <br>
-                            <h3 style="color:#d0b48c;">ÜRÜN ADI</h3>
+                            <h3 style="color:#d0b48c;">@item.ShopTitle</h3>
                             <p>
-                                <span class="item_price">$650</span>
+                                <span class="item_price">@item.ShopPrice</span>
                             </p>
                             <div class="occasional">
                                 <h5 style="color:#d0b48c;">Renk :</h5>
@@ -63,8 +63,8 @@
                                     <form action="#" method="post">
                                         <input type="hidden" name="cmd" value="_cart">
                                         <input type="hidden" name="add" value="1">
-                                        <input type="hidden" name="toys_item" value="Farenheit">
-                                        <input type="hidden" name="amount" value="575">
+                                    <input type="hidden" name="toys_item" value="@item.ShopTitle">
+                                    <input type="hidden" name="amount" value="@item.ShopPrice">
                                         <button type="submit" class="toys-cart ptoys-cart add">
                                             Sepete ekle
                                         </button>

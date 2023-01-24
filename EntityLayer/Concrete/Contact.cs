@@ -12,11 +12,9 @@ namespace EntityLayer.Concrete
     {
         [Key]
         public int Contactid { get; set; }
-        public string  ContactName { get; set; }
+        public string ContactUserName { get; set; }
         public string ContactMail { get; set; }
         public string ContactPhone { get; set; }
-        public string ContactText { get; set; }
-        public string ContactButton { get; set; }
-        //dataya yazdırmak için
+        public string ContactMessage { get; set; }
     }
 }

@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataAccessLayer.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20230124081243_migabout")]
-    partial class migabout
+    [Migration("20230124111047_mig100")]
+    partial class mig100
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -111,19 +111,16 @@ namespace DataAccessLayer.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("ContactButton")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("ContactMail")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ContactName")
+                    b.Property<string>("ContactMessage")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ContactPhone")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ContactText")
+                    b.Property<string>("ContactUserName")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Contactid");

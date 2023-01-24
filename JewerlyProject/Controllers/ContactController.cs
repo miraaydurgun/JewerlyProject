@@ -1,5 +1,6 @@
 ﻿using BusinessLayer.Concrete;
 using DataAccessLayer.EntityFramework;
+using EntityLayer.Concrete;
 using Microsoft.AspNetCore.Mvc;
 
 namespace JewelryProject.Controllers
@@ -9,12 +10,11 @@ namespace JewelryProject.Controllers
 
         ContactManager cm = new ContactManager(new EfContactRepository());
         public IActionResult Index()
-        //Jewelry'lerin listelendiği sayfa olacak
         {
             var values = cm.TGetList();
             return View(values);
 
         }
-    
+
     }
 }

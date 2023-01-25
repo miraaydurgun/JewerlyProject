@@ -1,32 +1,32 @@
 ﻿
 <meta charset="UTF-8">
-    <script>
-        addEventListener("load", function () {
-            setTimeout(hideURLbar, 0);
-        }, false);
+<script>
+    addEventListener("load", function () {
+        setTimeout(hideURLbar, 0);
+    }, false);
 
-        function hideURLbar() {
-            window.scrollTo(0, 1);
-        }
-    </script>
-    <!--//meta tags ends here-->
-    <!--booststrap-->
-    <link href="~/web/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
-    <!--//booststrap end-->
-    <!-- font-awesome icons -->
-    <link href="~/web/css/fontawesome-all.min.css" rel="stylesheet" type="text/css" media="all">
-    <!-- //font-awesome icons -->
-    <!--Shoping cart-->
-    <link rel="stylesheet" href="~/web/css/shop.css" type="text/css" />
-    <!--//Shoping cart-->
-    <!--stylesheets-->
-    <link href="~/web/css/style.css" rel='stylesheet' type='text/css' media="all">
-    <!--//stylesheets-->
-    <link href="http://fonts.googleapis.com/css?family=Sunflower:500,700" rel="stylesheet">
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+    function hideURLbar() {
+        window.scrollTo(0, 1);
+    }
+</script>
+<!--//meta tags ends here-->
+<!--booststrap-->
+<link href="~/web/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
+<!--//booststrap end-->
+<!-- font-awesome icons -->
+<link href="~/web/css/fontawesome-all.min.css" rel="stylesheet" type="text/css" media="all">
+<!-- //font-awesome icons -->
+<!--Shoping cart-->
+<link rel="stylesheet" href="~/web/css/shop.css" type="text/css" />
+<!--//Shoping cart-->
+<!--stylesheets-->
+<link href="~/web/css/style.css" rel='stylesheet' type='text/css' media="all">
+<!--//stylesheets-->
+<link href="http://fonts.googleapis.com/css?family=Sunflower:500,700" rel="stylesheet">
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
 
 
-    <meta name="robots" content="noindex">
+<meta name="robots" content="noindex">
 
 <div class="header-outs" id="home">
     <div class="header-bar">
@@ -48,9 +48,11 @@
                 <div class="col-lg-4 col-md-3 right-side-cart">
                     <div class="cart-icons">
                         <ul>
+                            <a href="/Customer/Login/Index/">
                             <li>
                                 <button type="button" data-toggle="modal" data-target="#exampleModal"> <span class="far fa-user"></span></button>
                             </li>
+                            </a>
                             <li class="toyscart toyscart2 cart cart box_1">
                                 <form action="#" method="post" class="last">
                                     <input type="hidden" name="cmd" value="_cart">
@@ -93,7 +95,7 @@
 
 
 
- <!-- Modal 1-->
+    <!-- Modal 1-->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">

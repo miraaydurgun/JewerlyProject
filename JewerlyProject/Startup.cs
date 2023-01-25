@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DataAccessLayer.Concrete;
+using EntityLayer.Concrete;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -23,6 +25,11 @@ namespace JewerlyProject
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //Eðer identity paketlerini kullanýyorsak,yani identitydbconyexy'i dbcontext yerine
+            //kullanacaksak servis için aþaðýdaki kodlaý yazmamýz gerekir
+            services.AddDbContext<Context>(); //hata çözümü için eklendi
+            services.AddIdentity<CustomerUser, CustomerRole>().AddEntityFrameworkStores<Context>();//hata çözümü için eklendi
+            
             services.AddControllersWithViews();
         }
 
@@ -51,6 +58,13 @@ namespace JewerlyProject
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+            });
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllerRoute(
+                  name: "areas",
+                  pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
+                );
             });
         }
     }

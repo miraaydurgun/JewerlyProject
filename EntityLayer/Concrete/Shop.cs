@@ -15,6 +15,8 @@ namespace EntityLayer.Concrete
         public string ShopHover { get; set; }
         public string ShopTitle { get; set; }
         public decimal ShopPrice { get; set; }
+        public decimal ShopPiece { get; set; }
+
         public string ShopCartIcon { get; set; }
         public bool ShopStatus { get; set; }
 

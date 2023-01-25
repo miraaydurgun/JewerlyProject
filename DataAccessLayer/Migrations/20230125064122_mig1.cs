@@ -38,6 +38,22 @@ namespace DataAccessLayer.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "CheckOuts",
+                columns: table => new
+                {
+                    CheckOutid = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    COName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    COPhone = table.Column<int>(type: "int", nullable: false),
+                    COCity = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    COAddress = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_CheckOuts", x => x.CheckOutid);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Contacts",
                 columns: table => new
                 {
@@ -173,8 +189,7 @@ namespace DataAccessLayer.Migrations
                     SingleStatus = table.Column<bool>(type: "bit", nullable: false),
                     Descriptionid = table.Column<int>(type: "int", nullable: false),
                     Reviewid = table.Column<int>(type: "int", nullable: false),
-                    Informationid = table.Column<int>(type: "int", nullable: false),
-                    CheckOutid = table.Column<int>(type: "int", nullable: true)
+                    Informationid = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -200,33 +215,6 @@ namespace DataAccessLayer.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "CheckOuts",
-                columns: table => new
-                {
-                    CheckOutid = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    COName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    COPhone = table.Column<int>(type: "int", nullable: false),
-                    COCountry = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    COCity = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    COAddressName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    COAddress = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    COButton = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    COPriceTotal = table.Column<int>(type: "int", nullable: false),
-                    Shop_Singleid = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_CheckOuts", x => x.CheckOutid);
-                    table.ForeignKey(
-                        name: "FK_CheckOuts_Shop_Singles_Shop_Singleid",
-                        column: x => x.Shop_Singleid,
-                        principalTable: "Shop_Singles",
-                        principalColumn: "Shop_Singleid",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Shops",
                 columns: table => new
                 {
@@ -236,6 +224,7 @@ namespace DataAccessLayer.Migrations
                     ShopHover = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ShopTitle = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ShopPrice = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    ShopPiece = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     ShopCartIcon = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ShopStatus = table.Column<bool>(type: "bit", nullable: false),
                     Shop_Singleid = table.Column<int>(type: "int", nullable: false)
@@ -252,11 +241,6 @@ namespace DataAccessLayer.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_CheckOuts_Shop_Singleid",
-                table: "CheckOuts",
-                column: "Shop_Singleid");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Homes_Campaignid",
                 table: "Homes",
                 column: "Campaignid");
@@ -270,11 +254,6 @@ namespace DataAccessLayer.Migrations
                 name: "IX_Homes_Reviewid",
                 table: "Homes",
                 column: "Reviewid");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Shop_Singles_CheckOutid",
-                table: "Shop_Singles",
-                column: "CheckOutid");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Shop_Singles_Descriptionid",
@@ -295,24 +274,15 @@ namespace DataAccessLayer.Migrations
                 name: "IX_Shops_Shop_Singleid",
                 table: "Shops",
                 column: "Shop_Singleid");
-
-            migrationBuilder.AddForeignKey(
-                name: "FK_Shop_Singles_CheckOuts_CheckOutid",
-                table: "Shop_Singles",
-                column: "CheckOutid",
-                principalTable: "CheckOuts",
-                principalColumn: "CheckOutid",
-                onDelete: ReferentialAction.Restrict);
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropForeignKey(
-                name: "FK_CheckOuts_Shop_Singles_Shop_Singleid",
-                table: "CheckOuts");
-
             migrationBuilder.DropTable(
                 name: "Abouts");
+
+            migrationBuilder.DropTable(
+                name: "CheckOuts");
 
             migrationBuilder.DropTable(
                 name: "Contacts");
@@ -334,9 +304,6 @@ namespace DataAccessLayer.Migrations
 
             migrationBuilder.DropTable(
                 name: "Shop_Singles");
-
-            migrationBuilder.DropTable(
-                name: "CheckOuts");
 
             migrationBuilder.DropTable(
                 name: "Descriptions");

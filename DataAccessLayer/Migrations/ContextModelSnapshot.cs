@@ -263,6 +263,9 @@ namespace DataAccessLayer.Migrations
                     b.Property<string>("ShopImage")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<decimal>("ShopPiece")
+                        .HasColumnType("decimal(18,2)");
+
                     b.Property<decimal>("ShopPrice")
                         .HasColumnType("decimal(18,2)");
 

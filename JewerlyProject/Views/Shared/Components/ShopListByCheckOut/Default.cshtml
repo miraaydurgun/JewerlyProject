@@ -1,0 +1,55 @@
+﻿@model IEnumerable<EntityLayer.Concrete.Shop>
+
+<div class="checkout-right">
+    <h4>Alışveriş Sepetiniz </h4>
+    <br />
+    <table class="timetable_sub">
+        <thead style="background-color:#eee9e0">
+            <tr>
+                <th>No</th>
+                <th>Görsel</th>
+                <th>Adet</th>
+                <th>Ürün Adı</th>
+                <th>Ücret </th>
+                <th>Ürünü Sil </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr class="rem1">
+
+                    <td class="invert" style="background-color:#eee9e0">@item.Shopid</td>
+                    <td class="invert-image"><a href="shop.html"><img src=@item.ShopImage alt=" " class="img-responsive" style="height:5rem;"></a></td>
+                    <td class="invert">
+                        <div class="quantity">
+                            <div class="quantity-select">
+                                <div class="entry value-minus">&nbsp;</div>
+                                <div class="entry value"><span>@item.ShopPiece</span></div>
+                                <div class="entry value-plus active">&nbsp;</div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="invert">@item.ShopTitle</td>
+                    <td class="invert" name="sayi1" id="sayi1">@item.ShopPrice</td>
+                    <td class="invert">
+                        <div class="rem">
+                            <div class="close1">
+                                <button class="button button1">Kaldır</button>
+
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <br />
+    <div class="col-md-4 checkout-left-basket">
+        <h4>Toplam Ücret</h4>
+        <ul>
+            <li>Toplam = <span><b>12.000</b></span></li>
+        </ul>
+    </div>
+</div>

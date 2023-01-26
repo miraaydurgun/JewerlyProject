@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Core_Proje.Areas.Customer.Controllers
+namespace JewelryProject.Areas.Customer.Controllers
 {
     public class UserLoginViewModel
     {

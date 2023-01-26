@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
-namespace Core_Proje.Areas.Customer.Controllers
+namespace JewelryProject.Areas.Customer.Controllers
 {
     [Area("Customer")]
     [Route("Customer/[Controller]/[Action]")] //Attribute Routing yapıyoruz, Area kullandığımız içi çalıştığımız sayfaların başına Customer ekledik.

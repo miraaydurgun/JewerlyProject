@@ -1,0 +1,69 @@
+﻿@using EntityLayer.Concrete
+@model List<Shop>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<!-- Card header -->
+<div class="card-header border-0">
+    <h3 class="mb-0">Deneyim Listesi Tablosu</h3>
+</div>
+<!-- Light table -->
+<div class="table-responsive">
+    <table class="table align-items-center table-flush">
+        <thead class="thead-light">
+            <tr>
+
+                <th scope="col" class="sort" data-sort="id">#</th>
+                <th scope="col" class="sort" data-sort="Name">Firma Adı</th>
+                <th scope="col" class="sort" data-sort="Description">Açıklama</th>
+                <th scope="col" class="sort" data-sort="Date">Tarih</th>
+                <th scope="col" class="sort" data-sort="ImageUrl">Image Url</th>
+                <th scope="col">Sil</th>
+                <th scope="col" class="sort" data-sort="completion">Düzenle</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody class="list">
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <th>
+                        @item.Shopid
+
+                    </th>
+                    <td class="budget">
+
+                        @item.ShopTitle
+                    </td>
+
+                    <td class="budget">
+
+                        @item.ShopHover
+                    </td>
+
+                    <td class="budget">
+
+                        @item.ShopPrice
+                    </td>
+                    <td class="budget">
+
+                        @item.ShopImage
+                    </td>
+
+
+                    <td> <a href="/Shop1/DeleteShop/@item.Shopid" class="btn btn-danger">Sil</a> </td>
+                    @*Silme ve güncelleme işlemi için id gönderiyoruz*@
+
+                    <td> <a href="/Shop1/EditShop/@item.Shopid" class="btn btn-info"> Güncelle</a> </td>
+
+
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <a href="/Shop1/AddShop" class="btn btn-success">Yeni Deneyim Ekle</a>
+</div>
+

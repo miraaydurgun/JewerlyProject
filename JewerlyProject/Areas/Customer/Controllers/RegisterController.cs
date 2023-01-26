@@ -1,10 +1,10 @@
-﻿using Core_Proje.Areas.Customer.Models;
-using EntityLayer.Concrete;
+﻿using EntityLayer.Concrete;
+using JewelryProject.Areas.Customer.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
-namespace Core_Proje.Areas.Customer.Controllers
+namespace JewelryProject.Areas.Customer.Controllers
 {
     [Area("Customer")]
     [Route("Customer/[Controller]/[Action]")] //Attribute Routing yapıyoruz, Area kullandığımız içi çalıştığımız sayfaların başına Customer ekledik.
@@ -18,10 +18,8 @@ namespace Core_Proje.Areas.Customer.Controllers
             _userManager = userManager;
             //UserManager üzerinden dependency injection yaparak CRUD işlemlerini gerçekleştireceğiz
         }
-
-
         //Kapsülleme gibi düşün 
-       
+
 
         [HttpGet]
         public IActionResult Index()
@@ -72,7 +70,7 @@ namespace Core_Proje.Areas.Customer.Controllers
                 else
                 {
                     foreach (var item in result.Errors)//sağlamıyorsa hata ver
-                        //Eğer yeni kullanıcı oluşturulmadıysa hata mesajı ver
+                                                       //Eğer yeni kullanıcı oluşturulmadıysa hata mesajı ver
                     {
                         ModelState.AddModelError("", item.Description);
                     }

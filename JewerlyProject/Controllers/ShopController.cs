@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace JewelryProject.Controllers
 {
-    public class ShopController : Controller
+    public class ShopAController : Controller
     {
         ShopManager sm = new ShopManager(new EfShopRepository());
         public IActionResult Index()

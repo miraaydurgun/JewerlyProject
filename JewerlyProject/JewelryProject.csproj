@@ -6,9 +6,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Areas\Customer\Data\**" />
     <Compile Remove="ViewComponents\Review\**" />
+    <Content Remove="Areas\Customer\Data\**" />
     <Content Remove="ViewComponents\Review\**" />
+    <EmbeddedResource Remove="Areas\Customer\Data\**" />
     <EmbeddedResource Remove="ViewComponents\Review\**" />
+    <None Remove="Areas\Customer\Data\**" />
     <None Remove="ViewComponents\Review\**" />
   </ItemGroup>
 
@@ -17,6 +21,14 @@
     <None Include="Areas\Customer\Views\Login\Index.cshtml" />
     <None Include="Areas\Customer\Views\Register\Index.cshtml" />
     <None Include="Areas\Customer\Views\_ViewImports.cshtml" />
+    <None Include="Views\Admin\NavigationPartial.cshtml" />
+    <None Include="Views\Admin\PartialFooter.cshtml" />
+    <None Include="Views\Admin\PartialHead.cshtml" />
+    <None Include="Views\Admin\PartialNavbar.cshtml" />
+    <None Include="Views\Admin\PartialScript.cshtml" />
+    <None Include="Views\Admin\PartialSideBar.cshtml" />
+    <None Include="Areas\Customer\Views\ShopA\AddShop.cshtml" />
+    <None Include="Areas\Customer\Views\ShopA\EditShop.cshtml" />
     <None Include="Views\Shared\Components\ShopListByShop_Single\Default.cshtml" />
     <None Include="wwwroot\skydash\.gitattributes" />
     <None Include="wwwroot\skydash\.gitignore" />
@@ -3370,6 +3382,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="10.3.6" />
     <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.9" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="5.0.17" />
@@ -3393,7 +3406,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Areas\Customer\Data\" />
     <Folder Include="wwwroot\skydash\.git\objects\info\" />
     <Folder Include="wwwroot\skydash\.git\objects\pack\" />
     <Folder Include="wwwroot\skydash\.git\refs\tags\" />

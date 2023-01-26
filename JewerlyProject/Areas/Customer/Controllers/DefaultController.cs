@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Win32;
 
-namespace Core_Proje.Areas.Customer.Controllers
+namespace JewelryProject.Areas.Customer.Controllers
 { 
          [Authorize] //Sistem Authantice olması için bunu yapıyoruz yani kullanıcı login olmadan bu sayfa açılmayacak
     public class DefaultController : Controller

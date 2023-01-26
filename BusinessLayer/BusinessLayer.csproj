@@ -5,12 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="ValidationRules\**" />
-    <EmbeddedResource Remove="ValidationRules\**" />
-    <None Remove="ValidationRules\**" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="10.3.6" />
     <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.9" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.9" />

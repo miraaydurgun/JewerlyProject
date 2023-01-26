@@ -1,0 +1,42 @@
+﻿@model EntityLayer.Concrete.Shop
+@{
+    ViewData["Title"] = "EditShop";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<div class="card-header border-0">
+    <h3 class="mb-0">Yetenek Güncelleme Tablosu</h3>
+</div>
+
+@*Aşağıdaki BeginForm tagine aksiyon, tablo, method tanımlaması yaptık.*@
+@using (Html.BeginForm("EditShop", "Shop", FormMethod.Post))
+{
+    <div style="margin-left:1rem; margin-right:1rem;">
+        @Html.HiddenFor(x=>x.Shopid ) @*Hidden for gönderilen referanslar için kullanılır hide gizli anlamında referans göndermeden güncellenecek*@
+    <br />
+    @Html.Label("Ürün Adı") @*açıklama textareafor olacak*@
+    @Html.TextBoxFor(x=> x.ShopTitle, new {@class="form-control"})
+        @Html.ValidationMessageFor(x=>x.ShopTitle,"",new{@class="text-danger", @style="font-size:12px;"})
+    <br />
+    @Html.Label("Açıklama") @*açıklama textareafor olacak*@
+        @Html.TextAreaFor(x=> x.ShopHover,4,2 ,new {@class="form-control"})
+        @Html.ValidationMessageFor(x=>x.ShopHover,"",new{@class="text-danger", @style="font-size:12px;"})
+    <br />
+    @Html.Label("Ücret") @*açıklama textareafor olacak*@
+        @Html.TextBoxFor(x=> x.ShopPrice, new {@class="form-control"})
+        @Html.ValidationMessageFor(x=>x.ShopPrice,"",new{@class="text-danger", @style="font-size:12px;"})
+    <br />
+    
+    @Html.Label("ImageUrl") @*açıklama textareafor olacak*@
+        @Html.TextBoxFor(x=> x.ShopImage, new {@class="form-control"})
+        @Html.ValidationMessageFor(x=>x.ShopImage,"",new{@class="text-danger", @style="font-size:12px;"})
+    <br />
+    <br />
+    <button type="submit" class="btn btn-success">Güncelle</button>
+        
+        <button type="reset"  class="btn btn-info">İptal</button>
+    </div>
+   <br />
+    
+}

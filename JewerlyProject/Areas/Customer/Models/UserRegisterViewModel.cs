@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Core_Proje.Areas.Customer.Models
+namespace JewelryProject.Areas.Customer.Models
 {
     public class UserRegisterViewModel
     {

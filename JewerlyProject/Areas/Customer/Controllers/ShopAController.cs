@@ -38,7 +38,7 @@ namespace JewelryProject.Areas.Customer.Controllers
             ViewBag.v2 = "Deneyimler";
             ViewBag.v3 = "Deneyim Ekleme";
 
-            ShopValidator validations = new ShopValidator();
+            ExperienceValidator validations = new ExperienceValidator();
             ValidationResult results = validations.Validate(shop);
 
             if (results.IsValid) //eğer giriş için olumsuz şart yoksa ekler
@@ -85,7 +85,7 @@ namespace JewelryProject.Areas.Customer.Controllers
             ViewBag.v1 = "Deneyim Güncelleme";//ViewBag ile gönderdiğimiz değer sayfaya aktarılır istenilen yerde kullanılır. AddSkill sayfasına.
             ViewBag.v2 = "Deneyimler";
             ViewBag.v3 = "Deneyim Güncelleme";
-            ShopValidator validations = new ShopValidator();
+            ExperienceValidator validations = new ExperienceValidator();
             ValidationResult results = validations.Validate(shop);
 
             if (results.IsValid) //eğer giriş için olumsuz şart yoksa ekler

@@ -29,6 +29,9 @@
     <None Include="Views\Admin\PartialSideBar.cshtml" />
     <None Include="Areas\Customer\Views\ShopA\AddShop.cshtml" />
     <None Include="Areas\Customer\Views\ShopA\EditShop.cshtml" />
+    <None Include="Views\Shop\AddExperience.cshtml" />
+    <None Include="Views\Shop\EditExperience.cshtml" />
+    <None Include="Views\Shop\Index.cshtml" />
     <None Include="Views\Shared\Components\ShopListByShop_Single\Default.cshtml" />
     <None Include="wwwroot\skydash\.gitattributes" />
     <None Include="wwwroot\skydash\.gitignore" />
@@ -3406,6 +3409,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Views\Experience\" />
     <Folder Include="wwwroot\skydash\.git\objects\info\" />
     <Folder Include="wwwroot\skydash\.git\objects\pack\" />
     <Folder Include="wwwroot\skydash\.git\refs\tags\" />

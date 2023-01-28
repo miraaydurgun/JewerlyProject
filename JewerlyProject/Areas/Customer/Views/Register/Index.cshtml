@@ -24,7 +24,7 @@
     <link href="~/web/css/style.css" rel='stylesheet' type='text/css' media="all">
 
     <!-- endinject -->
-    <link rel="shortcut icon" href="~/skydash/images/favicon.png" />
+    <link rel="shortcut icon" href="~/web/images/online-store.png" />
 </head>
 
 <body>
@@ -72,15 +72,13 @@
                                 <div class="form-group">
                                     <label>Şifre</label>
                                     <span asp-validation-for="Password" class="text-danger"></span>
-                                    <input type="text" asp-for="Password" name="password" class="form-control" />
+                                    <input type="password" asp-for="Password" name="password" class="form-control" />
                                 </div>
                                 <div class="form-group">
                                     <label>Şifre Tekrar</label>
                                     <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
-                                    <input type="text" asp-for="ConfirmPassword" class="form-control" />
+                                    <input type="password" asp-for="ConfirmPassword" class="form-control" />
                                 </div>
-                                <label for="password">Password</label>
-                                <input type="password" name="password" id="password" class="password" />
                                 <div class="text-danger" asp-validation-summary="ModelOnly"></div>
                                 @*Bu bölümdeki yazılan asp-validation-summary="ModelOnly"
                                 form için doldurulması gereken bilgiler ile ilgili mesajların yazdırılmasını sağlar*@
